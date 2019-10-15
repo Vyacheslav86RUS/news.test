@@ -18,4 +18,12 @@ class Route
         self::$_routes[] = $route;
     }
 
+    public static function to($url)
+    {
+        if ($url === '') {
+            $url = $_SERVER['REQUEST_URI'];
+        }
+        return urldecode(preg_replace('/\?.*/iu', '', $url));
+    }
+
 }

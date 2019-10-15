@@ -2,8 +2,8 @@
 
 include 'vendor/autoload.php';
 
-use app\framework\Route;
-use app\Application;
+use App\Framework\Route;
+use App\Application;
 
 $config = require 'config/web.php';
 
